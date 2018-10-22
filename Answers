@@ -1,14 +1,20 @@
 These are my answers for Problem Set 3.
 
 #1)
-def getMinMax(itr):
-    i = iter(itr)
-    smallest = largest = i.next()
-    for number in i:
-        if number < smallest:
-            smallest = number
-        elif number > largest:
-            largest = number
-    return smallest, largest
-    
-    this gives the line number of the line with the maximum water level, but not the actual value -- help?
+b = open('WaterLevelData')
+
+c = b.readlines()
+regels = len(c)
+
+print(regels)
+
+max = 0
+for line in b.readlines():
+  num = int(line.split(",")[0])
+  if (max < num):
+    max = num 
+
+
+print(max)
+
+This script gives the line number of the line with the maximum water level, but not the actual value -- help?
