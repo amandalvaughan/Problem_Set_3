@@ -14,7 +14,29 @@ for line in b.readlines():
   if (max < num):
     max = num 
 
-
 print(max)
 
-This script gives the line number of the line with the maximum water level, but not the actual value -- help?
+This usually spits out the total line count; any suggestions for improving?
+
+#2) [in jupyter notebook]
+
+import pandas as pd
+
+df = pd.read_table('WaterLevelData', sep='\t')
+df.head()
+df['Water Level'].max()
+df.loc[df['Water Level'].idxmax()]
+
+I saved the repo to my computer as WaterLevelData, so if you use your version, this should work; it does for me! I can provide a screenshot if necessary!
+
+#3) [in jupyter notebook]
+
+df = pd.read_table('WaterLevelData', sep='\t')
+df.head()
+max(df['Water Level'].shift(-1)-df['Water Level'])
+
+Gives me the difference!
+
+#4) I am an undergraduate student :)
+
+Extra Credit: n/a
