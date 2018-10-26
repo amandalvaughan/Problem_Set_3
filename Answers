@@ -1,22 +1,26 @@
 These are my answers for Problem Set 3.
 
 #1)
-b = open('WaterLevelData')
+try:
+  Data = open("documents\WaterLevel.csv")
+except:
+  print("can't open file")
+largest = None
+date = Note
+print('Before:', largest)
+for line in Data
+  line_bits = line.split(",")
+  try: 
+    water_level = float(line_bits[1]
+  except:
+    continue
+  if largest is None or water_level > largest :
+    largest = water_level
+    date = line_bits[0]
+print(largest)
+print(date)
 
-c = b.readlines()
-regels = len(c)
-
-print(regels)
-
-max = 0
-for line in b.readlines():
-  num = int(line.split(",")[0])
-  if (max < num):
-    max = num 
-
-print(max)
-
-This usually spits out the total line count; any suggestions for improving?
+I saved the repo to my computer as WaterLevelData
 
 #2) [in jupyter notebook]
 
