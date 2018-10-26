@@ -1,26 +1,27 @@
 These are my answers for Problem Set 3.
 
 #1)
+
 try:
-  Data = open("documents\WaterLevel.csv")
+    Data = open('WaterLevelData')
 except:
-  print("can't open file")
+    print("can't open file")
 largest = None
-date = Note
+date = None
 print('Before:', largest)
-for line in Data
-  line_bits = line.split(",")
-  try: 
-    water_level = float(line_bits[1]
-  except:
-    continue
-  if largest is None or water_level > largest :
-    largest = water_level
-    date = line_bits[0]
+for line in Data:
+    line_bits = line.split(",")
+    try:
+        water_level = float(line_bits[1])
+    except:
+        continue
+    if largest is None or water_level > largest :
+        largest = water_level
+        date = line_bits[0]
 print(largest)
 print(date)
 
-I saved the repo to my computer as WaterLevelData
+I saved the repo to my computer as WaterLevelData - so if you input your version of the file, should work! :)
 
 #2) [in jupyter notebook]
 
